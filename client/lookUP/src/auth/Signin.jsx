@@ -22,7 +22,7 @@ const Signin = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/auth/signin",
+        "https://lookup-1.onrender.com/api/auth/signin",
         {
           email,
           password,

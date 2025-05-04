@@ -36,7 +36,7 @@ const UserProfile = () => {
   const fetchUserDetails = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/user-profile/${id}`
+        `https://lookup-1.onrender.com/api/user-profile/${id}`
       );
       setUser(res.data.user);
       setProfileImage(res.data.user.profilePic);
@@ -63,7 +63,7 @@ const UserProfile = () => {
 
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/fetch-all-post/${id}`
+        `https://lookup-1.onrender.com/api/fetch-all-post/${id}`
       );
       console.log(res.data.posts);
       setAllPost(res.data.posts); // ✅ Set posts properly
@@ -142,7 +142,7 @@ const UserProfile = () => {
   // function to follow
   const FollowHandler = async () => {
     try {
-      const res = await axios.put("http://localhost:8080/api/follow", {
+      const res = await axios.put("https://lookup-1.onrender.com/api/follow", {
         loggedUserID: loggedInUser._id,
         targetUserID: id,
       });
@@ -172,10 +172,13 @@ const UserProfile = () => {
   // function to unfollow
   const UnFollowHandler = async () => {
     try {
-      const res = await axios.put("http://localhost:8080/api/unfollow", {
-        loggedUserID: loggedInUser._id,
-        targetUserID: id,
-      });
+      const res = await axios.put(
+        "https://lookup-1.onrender.com/api/unfollow",
+        {
+          loggedUserID: loggedInUser._id,
+          targetUserID: id,
+        }
+      );
 
       if (res.status === 200) {
         toast.success("Unfollowed Successfully!");
@@ -207,7 +210,7 @@ const UserProfile = () => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:8080/api/delete-post/${DeletePostID}`
+        `https://lookup-1.onrender.com/api/delete-post/${DeletePostID}`
       );
 
       if (res.status === 200) {

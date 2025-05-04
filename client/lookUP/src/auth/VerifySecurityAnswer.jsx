@@ -20,7 +20,7 @@ const VerifySecurityAnswer = () => {
     try {
       // Send POST request to your backend API
       const { data } = await axios.post(
-        "http://localhost:8080/api/auth/verify-security-answer",
+        "https://lookup-1.onrender.com/api/auth/verify-security-answer",
         {
           email,
           securityAnswer,

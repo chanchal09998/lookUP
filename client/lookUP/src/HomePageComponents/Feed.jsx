@@ -22,7 +22,7 @@ function Feed() {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/home-page-posts`,
+        `https://lookup-1.onrender.com/api/home-page-posts`,
         {
           params: { userId: user._id },
           headers: { Authorization: `Bearer ${token}` },
