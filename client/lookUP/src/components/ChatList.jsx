@@ -31,7 +31,7 @@ function ChatList() {
 
   return (
     <div className="chats-container">
-      <h2 className="chat-header" style={{ marginTop: "30px" }}>
+      <h2 className="chat-header" style={{ marginTop: "35px" }}>
         Your Chats
       </h2>
       <div className="chat-list">
