@@ -116,7 +116,7 @@ const UserProfile = () => {
       }
 
       const res = await axios.put(
-        `http://localhost:8080/api/update-user-profile/${id}`,
+        `https://lookup-1.onrender.com/api/update-user-profile/${id}`,
         updatedData,
         {
           headers: {
