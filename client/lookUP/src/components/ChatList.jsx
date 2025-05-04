@@ -31,7 +31,9 @@ function ChatList() {
 
   return (
     <div className="chats-container">
-      <h2 className="chat-header">Your Chats</h2>
+      <h2 className="chat-header" style={{ marginTop: "20px" }}>
+        Your Chats
+      </h2>
       <div className="chat-list">
         {chats.map((chat) => {
           const otherUser = chat.users.find((u) => u._id !== userData._id);
