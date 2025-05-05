@@ -45,3 +45,11 @@
   font-weight: bold;
   color: #333;
 }
+
+@media screen and(max-width:480px) {
+  .following-container {
+    max-height: 85vh;
+    margin-top: 15px;
+    overflow-y: auto;
+  }
+}
