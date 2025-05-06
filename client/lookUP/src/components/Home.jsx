@@ -14,7 +14,7 @@ import ChatWindow from "./ChatWindow";
 function Home() {
   const navigate = useNavigate();
 
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     // Fetch token and user data from localStorage
@@ -35,7 +35,7 @@ function Home() {
       <Sidebar />
       <div className="main-content">
         <Routes>
-          <Route path="/" element={<Feed posts={posts} />} />
+          <Route path="/" element={<Feed />} />
           <Route path="/chatlist/:id" element={<ChatList />} />
           <Route path="/chatwindow/:id" element={<ChatWindow />} />
           <Route
