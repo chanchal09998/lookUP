@@ -24,12 +24,12 @@ export const getHomePagePosts = async (req, res) => {
     ];
 
     // Time threshold: last 24 hours
-    const fortyEightHoursAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    const oneMonthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
 
     // Fetch and filter posts in DB
     const posts = await PostModel.find({
       user: { $in: connections },
-      createdAt: { $gte: fortyEightHoursAgo },
+      createdAt: { $gte: oneMonthAgo },
     })
       .sort({ createdAt: -1 })
       .populate("user", "username profilePic _id");
